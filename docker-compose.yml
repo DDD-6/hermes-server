@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfiles/local.Dockerfile
+    volumes:
+      - './src:/home/app/src'
+    ports:
+      - '3000:3000'
+    depends_on:
+      - database
+    container_name: hermes
+    environment:
+      DB_URL: database
+      DB_PORT: 3306
+      DB_NAME: hermes
+      DB_USER: hermes
+      DB_PASSWD: hermes
+    networks:
+      - dev
+
+  database:
+    image: mysql:8
+    ports:
+      - '3306:3306'
+    volumes:
+      - data:/var/lib/mysql
+    container_name: hermes_database
+    environment:
+      MYSQL_DATABASE: hermes
+      MYSQL_USER: hermes
+      MYSQL_PASSWORD: hermes
+      MYSQL_ROOT_PASSWORD: hermes
+    networks:
+      - dev
+
+volumes:
+  data:
+
+networks:
+  dev:
