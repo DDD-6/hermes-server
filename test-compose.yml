@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  e2e-test:
+    build:
+      context: .
+      dockerfile: Dockerfiles/test.Dockerfile
+    depends_on:
+      - testdb
+    container_name: e2e-test
+    networks:
+      - e2e
+    environment:
+      DB_URL: testdb
+      DB_NAME: hermes
+      DB_USER: hermes
+      DB_PASSWD: hermes
+
+  testdb:
+    image: mysql:8
+    volumes:
+      - testdata:/var/lib/mysql
+    networks:
+      - e2e
+    container_name: hermes_testdb
+    environment:
+      MYSQL_USER: hermes
+      MYSQL_PASSWORD: hermes
+      MYSQL_ROOT_PASSWORD: hermes
+
+networks:
+  e2e:
+
+volumes:
+  testdata:
