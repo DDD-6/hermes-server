@@ -1,5 +1,6 @@
 import { Controller, Get, Req, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
+import { User } from 'src/core/decorator/user.decorator';
 import { AuthService } from './auth.service';
 
 @Controller('authentication')
@@ -8,31 +9,31 @@ export class AuthController {
 
     @Get('google')
     @UseGuards(AuthGuard('google'))
-    async googleAuth(@Req() req) {}
+    async googleAuth(@User() user) {}
 
     @Get('google/callback')
     @UseGuards(AuthGuard('google'))
-    googleAuthRedirect(@Req() req) {
-        return this.authService.googleLogin(req);
+    googleAuthRedirect(@User() user) {
+        return this.authService.googleLogin(user);
     }
 
     @Get('kakao')
     @UseGuards(AuthGuard('kakao'))
-    async kakaoAuth(@Req() req) {}
+    async kakaoAuth(@User() user) {}
 
     @Get('kakao/callback')
     @UseGuards(AuthGuard('kakao'))
-    kakaoAuthRedirect(@Req() req) {
-        console.log("kakao");
+    kakaoAuthRedirect(@User() user) {
+        return this.authService.kakaoLogin(user);
     }
 
     @Get('naver')
     @UseGuards(AuthGuard('naver'))
-    async naverAuth(@Req() req) {}
+    async naverAuth(@User() user) {}
 
     @Get('naver/callback')
     @UseGuards(AuthGuard('naver'))
-    naverAuthRedirect(@Req() req) {
-        console.log("naver");
+    naverAuthRedirect(@User() user) {
+        return this.authService.naverLogin(user);
     }
 }
