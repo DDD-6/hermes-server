@@ -5,9 +5,25 @@
 - Docker
 - Docker Compose
 - make
+- env files
 
 > 패키지 의존성은 컨테이너 안에서 설치가되어서 개발 환경과 상관 없이 작동하는데, IDE에서 인식을 못 하기 때문에 로컬에서도 인스톨 하고 시작하세요!
 > 환경 간 차이를 최소화 하기 위해서 이렇게 설정 했는데, 특히 초반에 패키지 인스톨 때문에 개발 속도가 안난다 생각되시면, 인스톨 되는 패키지 공유하도록 바꾸겠습니다.
+
+각 환경마다, 환경 변수 파일이 필요합니다.
+
+```
+Dockerfiles/
+envs/
+    local.env
+    test.env
+    dev.env
+    prod.env
+node_modules/
+src/
+test/
+...
+```
 
 ## Run
 
