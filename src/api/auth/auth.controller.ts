@@ -15,4 +15,24 @@ export class AuthController {
     googleAuthRedirect(@Req() req) {
         return this.authService.googleLogin(req);
     }
+
+    @Get('kakao')
+    @UseGuards(AuthGuard('kakao'))
+    async kakaoAuth(@Req() req) {}
+
+    @Get('kakao/callback')
+    @UseGuards(AuthGuard('kakao'))
+    kakaoAuthRedirect(@Req() req) {
+        console.log("kakao");
+    }
+
+    @Get('naver')
+    @UseGuards(AuthGuard('naver'))
+    async naverAuth(@Req() req) {}
+
+    @Get('naver/callback')
+    @UseGuards(AuthGuard('naver'))
+    naverAuthRedirect(@Req() req) {
+        console.log("naver");
+    }
 }

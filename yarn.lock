@@ -624,7 +624,7 @@
     "webpack" "5.45.1"
     "webpack-node-externals" "3.0.0"
 
-"@nestjs/common@^6.0.0 || ^7.0.0 || ^8.0.0", "@nestjs/common@^7.0.0 || ^8.0.0", "@nestjs/common@^8.0.0":
+"@nestjs/common@^6.0.0 || ^7.0.0 || ^8.0.0", "@nestjs/common@^7.0.0 || ^8.0.0", "@nestjs/common@^7.0.8 || ^8.0.0", "@nestjs/common@^8.0.0":
   "integrity" "sha512-mSD000iYJDN2wjL2hbygCVNVvzvi3VW5EDc25gK1Bj3wUU2HR8m1qOAUBqcCaGIuvBb2cD/pnVkKklnsY0rKhw=="
   "resolved" "https://registry.npmjs.org/@nestjs/common/-/common-8.0.6.tgz"
   "version" "8.0.6"
@@ -667,6 +667,11 @@
     "@types/jsonwebtoken" "8.5.4"
     "jsonwebtoken" "8.5.1"
 
+"@nestjs/mapped-types@1.0.0":
+  "integrity" "sha512-26AW5jHadLXtvHs+M+Agd9KZ92dDlBrmD0rORlBlvn2KvsWs4JRaKl2mUsrW7YsdZeAu3Hc4ukqyYyDdyCmMWQ=="
+  "resolved" "https://registry.npmjs.org/@nestjs/mapped-types/-/mapped-types-1.0.0.tgz"
+  "version" "1.0.0"
+
 "@nestjs/passport@^8.0.1":
   "integrity" "sha512-vn/ZJLXQKvSf9D0BvEoNFJLfzl9AVqfGtDyQMfWDLbaNpoEB2FyeaHGxdiX6H71oLSrQV78c/yuhfantzwdjdg=="
   "resolved" "https://registry.npmjs.org/@nestjs/passport/-/passport-8.0.1.tgz"
@@ -693,6 +698,15 @@
     "fs-extra" "10.0.0"
     "jsonc-parser" "3.0.0"
     "pluralize" "8.0.0"
+
+"@nestjs/swagger@^5.1.4":
+  "integrity" "sha512-hwVo57Nhw+TyS3xXa8pQAMVOXQAoXBszJbnUAqLcKlVtQ8jqmSRKPTApefXSf/XDoG5LekRYi9Re2SOt1T2WlA=="
+  "resolved" "https://registry.npmjs.org/@nestjs/swagger/-/swagger-5.1.4.tgz"
+  "version" "5.1.4"
+  dependencies:
+    "@nestjs/mapped-types" "1.0.0"
+    "lodash" "4.17.21"
+    "path-to-regexp" "3.2.0"
 
 "@nestjs/testing@^8.0.0":
   "integrity" "sha512-HRXGM5RlGa+o+kxWI9DQCALndSvL3Remjg1cZVFp2w2s5eXRPpiFMo9puXtu9DSc4tz78xYcQGmEaeYNTB7gvg=="
@@ -967,6 +981,22 @@
     "@types/jsonwebtoken" "*"
     "@types/passport-strategy" "*"
 
+"@types/passport-kakao@^0.2.1":
+  "integrity" "sha512-BezdDVFW0KrP7CJGtQzMfxw9RgmgKZe9TPhd5nBGoPCAmakFhO8p6Numn1oYU5kwjvK3gS8pqDLWmLBhBBERwQ=="
+  "resolved" "https://registry.npmjs.org/@types/passport-kakao/-/passport-kakao-0.2.1.tgz"
+  "version" "0.2.1"
+  dependencies:
+    "@types/express" "*"
+    "@types/passport" "*"
+
+"@types/passport-naver@^0.2.1":
+  "integrity" "sha512-b8sN1kBaRdUXVIBB+e3HcsDGD3l8rsfujlieJMZt4n3pF/FDBvzbGL2LNmN2jyt67tCRz7DDguvUta2L700Kwg=="
+  "resolved" "https://registry.npmjs.org/@types/passport-naver/-/passport-naver-0.2.1.tgz"
+  "version" "0.2.1"
+  dependencies:
+    "@types/express" "*"
+    "@types/passport" "*"
+
 "@types/passport-oauth2@*":
   "integrity" "sha512-KUNwmGhe/3xPbjkzkPwwcPmyFwfyiSgtV1qOrPBLaU4i4q9GSCdAOyCbkFG0gUxAyEmYwqo9OAF/rjPjJ6ImdA=="
   "resolved" "https://registry.npmjs.org/@types/passport-oauth2/-/passport-oauth2-1.4.11.tgz"
@@ -1033,6 +1063,11 @@
   "version" "2.0.11"
   dependencies:
     "@types/superagent" "*"
+
+"@types/validator@^13.1.3":
+  "integrity" "sha512-ilpDKpjjq/w/IyyTuQ38mABdaEzTzTugPyU7DlMCMKd8MMYngnPKhA2TgdO1MfEDED9KVV7uSOL1fDkgwJp/wg=="
+  "resolved" "https://registry.npmjs.org/@types/validator/-/validator-13.6.5.tgz"
+  "version" "13.6.5"
 
 "@types/yargs-parser@*":
   "integrity" "sha512-7tFImggNeNBVMsn0vLrpn1H1uPrUBdnARPTpZoitY37ZrdJREzf7I16tMrlK3hen349gr1NYh8CmZQa7CTG6Aw=="
@@ -1816,6 +1851,20 @@
   "resolved" "https://registry.npmjs.org/cjs-module-lexer/-/cjs-module-lexer-1.2.2.tgz"
   "version" "1.2.2"
 
+"class-transformer@*", "class-transformer@^0.2.0 || ^0.3.0 || ^0.4.0", "class-transformer@^0.4.0":
+  "integrity" "sha512-ETWD/H2TbWbKEi7m9N4Km5+cw1hNcqJSxlSYhsLsNjQzWWiZIYA1zafxpK9PwVfaZ6AqR5rrjPVUBGESm5tQUA=="
+  "resolved" "https://registry.npmjs.org/class-transformer/-/class-transformer-0.4.0.tgz"
+  "version" "0.4.0"
+
+"class-validator@*", "class-validator@^0.11.1 || ^0.12.0 || ^0.13.0", "class-validator@^0.13.1":
+  "integrity" "sha512-zWIeYFhUitvAHBwNhDdCRK09hWx+P0HUwFE8US8/CxFpMVzkUK8RJl7yOIE+BVu2lxyPNgeOaFv78tLE47jBIg=="
+  "resolved" "https://registry.npmjs.org/class-validator/-/class-validator-0.13.1.tgz"
+  "version" "0.13.1"
+  dependencies:
+    "@types/validator" "^13.1.3"
+    "libphonenumber-js" "^1.9.7"
+    "validator" "^13.5.2"
+
 "cli-cursor@^3.1.0":
   "integrity" "sha512-I/zHAwsKf9FqGoXM4WWRACob9+SNukZTd94DWF57E4toouRulbCxcUh6RKUEOQlYTHJnzkPMySvPNaaSLNfLZw=="
   "resolved" "https://registry.npmjs.org/cli-cursor/-/cli-cursor-3.1.0.tgz"
@@ -2481,7 +2530,7 @@
     "jest-message-util" "^27.2.0"
     "jest-regex-util" "^27.0.6"
 
-"express@4.17.1":
+"express@>=4.0.0", "express@4.17.1":
   "integrity" "sha512-mHJ9O79RqluphRrcw2X/GTh3k9tVv8YcoyY4Kkh4WDMUYKRZUq0h1o0w2rrrxBqM7VoeUVqgb27xlEMXTnYt4g=="
   "resolved" "https://registry.npmjs.org/express/-/express-4.17.1.tgz"
   "version" "4.17.1"
@@ -3750,6 +3799,11 @@
     "prelude-ls" "~1.1.2"
     "type-check" "~0.3.2"
 
+"libphonenumber-js@^1.9.7":
+  "integrity" "sha512-TxYz/Ii7mjkocKGKmFHhsTAvvcxr4AY3yUlZzZ2z7HC4DPRrNlzJ9n32/SMogqsyFOXLMXQPCkCInNRbiVaEPA=="
+  "resolved" "https://registry.npmjs.org/libphonenumber-js/-/libphonenumber-js-1.9.39.tgz"
+  "version" "1.9.39"
+
 "lines-and-columns@^1.1.6":
   "integrity" "sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA="
   "resolved" "https://registry.npmjs.org/lines-and-columns/-/lines-and-columns-1.1.6.tgz"
@@ -3837,7 +3891,7 @@
   "resolved" "https://registry.npmjs.org/lodash.truncate/-/lodash.truncate-4.4.2.tgz"
   "version" "4.4.2"
 
-"lodash@^4.17.19", "lodash@^4.17.21", "lodash@^4.7.0", "lodash@4.x":
+"lodash@^4.17.19", "lodash@^4.17.21", "lodash@^4.7.0", "lodash@4.17.21", "lodash@4.x":
   "integrity" "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
   "resolved" "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
   "version" "4.17.21"
@@ -4318,6 +4372,48 @@
     "jsonwebtoken" "^8.2.0"
     "passport-strategy" "^1.0.0"
 
+"passport-kakao@^1.0.1":
+  "integrity" "sha512-uItaYRVrTHL6iGPMnMZvPa/O1GrAdh/V6EMjOHcFlQcVroZ9wgG7BZ5PonMNJCxfHQ3L2QVNRnzhKWUzSsumbw=="
+  "resolved" "https://registry.npmjs.org/passport-kakao/-/passport-kakao-1.0.1.tgz"
+  "version" "1.0.1"
+  dependencies:
+    "passport-oauth2" "~1.1.2"
+    "pkginfo" "~0.3.0"
+
+"passport-naver@^1.0.6":
+  "integrity" "sha512-5XEbJesiPVshwE0cTDvbbJrOiYSJ9VFRJTctqiZL1Xip6qOi9n7d49UesOqavLT+Ry8C7aw3zdzbmWosqHcQ/Q=="
+  "resolved" "https://registry.npmjs.org/passport-naver/-/passport-naver-1.0.6.tgz"
+  "version" "1.0.6"
+  dependencies:
+    "passport-oauth" "^1.0.0"
+    "underscore" "^1.8.3"
+
+"passport-oauth@^1.0.0":
+  "integrity" "sha1-kK/2M4dUDwIImvKM2tOep/gNd98="
+  "resolved" "https://registry.npmjs.org/passport-oauth/-/passport-oauth-1.0.0.tgz"
+  "version" "1.0.0"
+  dependencies:
+    "passport-oauth1" "1.x.x"
+    "passport-oauth2" "1.x.x"
+
+"passport-oauth1@1.x.x":
+  "integrity" "sha512-Sv2YWodC6jN12M/OXwmR4BIXeeIHjjbwYTQw4kS6tHK4zYzSEpxBgSJJnknBjICA5cj0ju3FSnG1XmHgIhYnLg=="
+  "resolved" "https://registry.npmjs.org/passport-oauth1/-/passport-oauth1-1.2.0.tgz"
+  "version" "1.2.0"
+  dependencies:
+    "oauth" "0.9.x"
+    "passport-strategy" "1.x.x"
+    "utils-merge" "1.x.x"
+
+"passport-oauth2@~1.1.2":
+  "integrity" "sha1-vXFjsbYJA3GGjcTvb58uHkzEuUg="
+  "resolved" "https://registry.npmjs.org/passport-oauth2/-/passport-oauth2-1.1.2.tgz"
+  "version" "1.1.2"
+  dependencies:
+    "oauth" "0.9.x"
+    "passport-strategy" "1.x.x"
+    "uid2" "0.0.x"
+
 "passport-oauth2@1.x.x":
   "integrity" "sha512-ZbV43Hq9d/SBSYQ22GOiglFsjsD1YY/qdiptA+8ej+9C1dL1TVB+mBE5kDH/D4AJo50+2i8f4bx0vg4/yDDZCQ=="
   "resolved" "https://registry.npmjs.org/passport-oauth2/-/passport-oauth2-1.6.1.tgz"
@@ -4400,6 +4496,11 @@
   "version" "4.2.0"
   dependencies:
     "find-up" "^4.0.0"
+
+"pkginfo@~0.3.0":
+  "integrity" "sha1-Wyn2qB9wcXFC4J52W76rl7T4HiE="
+  "resolved" "https://registry.npmjs.org/pkginfo/-/pkginfo-0.3.1.tgz"
+  "version" "0.3.1"
 
 "pluralize@8.0.0":
   "integrity" "sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA=="
@@ -5120,6 +5221,18 @@
     "has-flag" "^4.0.0"
     "supports-color" "^7.0.0"
 
+"swagger-ui-dist@^3.18.1":
+  "integrity" "sha512-8z18eX8G/jbTXYzyNIaobrnD7PSN7yU/YkSasMmajrXtw0FGS64XjrKn5v37d36qmU3o1xLeuYnktshRr7uIFw=="
+  "resolved" "https://registry.npmjs.org/swagger-ui-dist/-/swagger-ui-dist-3.52.5.tgz"
+  "version" "3.52.5"
+
+"swagger-ui-express@*", "swagger-ui-express@^4.1.6":
+  "integrity" "sha512-Xs2BGGudvDBtL7RXcYtNvHsFtP1DBFPMJFRxHe5ez/VG/rzVOEjazJOOSc/kSCyxreCTKfJrII6MJlL9a6t8vw=="
+  "resolved" "https://registry.npmjs.org/swagger-ui-express/-/swagger-ui-express-4.1.6.tgz"
+  "version" "4.1.6"
+  dependencies:
+    "swagger-ui-dist" "^3.18.1"
+
 "symbol-observable@4.0.0":
   "integrity" "sha512-b19dMThMV4HVFynSAM1++gBHAbk2Tc/osgLIBZMKsyqh34jb2e8Os7T6ZW/Bt3pJFdBTd2JwAnAAEQV7rSNvcQ=="
   "resolved" "https://registry.npmjs.org/symbol-observable/-/symbol-observable-4.0.0.tgz"
@@ -5458,6 +5571,11 @@
   "resolved" "https://registry.npmjs.org/uid2/-/uid2-0.0.4.tgz"
   "version" "0.0.4"
 
+"underscore@^1.8.3":
+  "integrity" "sha512-hzSoAVtJF+3ZtiFX0VgfFPHEDRm7Y/QPjGyNo4TVdnDTdft3tr8hEkD25a1jC+TjTuE7tkHGKkhwCgs9dgBB2g=="
+  "resolved" "https://registry.npmjs.org/underscore/-/underscore-1.13.1.tgz"
+  "version" "1.13.1"
+
 "universalify@^0.1.2":
   "integrity" "sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg=="
   "resolved" "https://registry.npmjs.org/universalify/-/universalify-0.1.2.tgz"
@@ -5508,6 +5626,11 @@
     "@types/istanbul-lib-coverage" "^2.0.1"
     "convert-source-map" "^1.6.0"
     "source-map" "^0.7.3"
+
+"validator@^13.5.2":
+  "integrity" "sha512-gVgKbdbHgtxpRyR8K0O6oFZPhhB5tT1jeEHZR0Znr9Svg03U0+r9DXWMrnRAB+HtCStDQKlaIZm42tVsVjqtjg=="
+  "resolved" "https://registry.npmjs.org/validator/-/validator-13.6.0.tgz"
+  "version" "13.6.0"
 
 "vary@^1", "vary@~1.1.2":
   "integrity" "sha1-IpnwLG3tMNSllhsLn3RSShj2NPw="
