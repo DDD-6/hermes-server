@@ -7,6 +7,7 @@ import { AccessLoggerMiddleware } from './core/middlewares/logger.service';
 
 @Module({
   imports: [
+    ConfigsModule,
     TypeOrmModule.forRootAsync({
       imports: [ConfigsModule],
       useFactory: (config: ConfigsService) => ({
@@ -16,7 +17,8 @@ import { AccessLoggerMiddleware } from './core/middlewares/logger.service';
         database: config.DB_NAME,
         username: config.DB_USER,
         password: config.DB_PASSWD,
-        synchronize: true,
+        synchronize: config.IS_DEV,
+        keepConnectionAlive: config.IS_DEV,
       }),
       inject: [ConfigsService],
     }),

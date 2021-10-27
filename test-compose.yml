@@ -10,11 +10,8 @@ services:
     container_name: e2e-test
     networks:
       - e2e
-    environment:
-      DB_URL: testdb
-      DB_NAME: hermes
-      DB_USER: hermes
-      DB_PASSWD: hermes
+    env_file:
+      - envs/test.env
 
   testdb:
     image: mysql:8
