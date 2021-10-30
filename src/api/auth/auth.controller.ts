@@ -13,8 +13,8 @@ export class AuthController {
 
     @Get('google/callback')
     @UseGuards(AuthGuard('google'))
-    googleAuthRedirect(@User() user) {
-        return this.authService.googleLogin(user);
+    googleAuthRedirect(@User() user): Promise<string> {
+        return this.authService.socialLogin(user);
     }
 
     @Get('kakao')
@@ -24,7 +24,7 @@ export class AuthController {
     @Get('kakao/callback')
     @UseGuards(AuthGuard('kakao'))
     kakaoAuthRedirect(@User() user) {
-        return this.authService.kakaoLogin(user);
+        return this.authService.socialLogin(user);
     }
 
     @Get('naver')
@@ -34,6 +34,6 @@ export class AuthController {
     @Get('naver/callback')
     @UseGuards(AuthGuard('naver'))
     naverAuthRedirect(@User() user) {
-        return this.authService.naverLogin(user);
+        return this.authService.socialLogin(user);
     }
 }

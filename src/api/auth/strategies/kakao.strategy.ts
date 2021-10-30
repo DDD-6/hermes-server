@@ -19,6 +19,7 @@ export class KakaoStrategy extends PassportStrategy(Strategy, 'kakao') {
         done: VerifyCallback,
     ): Promise<any> {
         const user = {
+            id: profile.id,
             name: profile.username,
             providers: 'kakao',
             accessToken

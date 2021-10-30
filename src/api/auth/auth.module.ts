@@ -8,6 +8,8 @@ import { KakaoStrategy } from './strategies/kakao.strategy';
 import { JwtModule } from '@nestjs/jwt';
 import { NaverStrategy } from './strategies/naver.strategy';
 import { JwtStrategy } from './strategies/jwt.strategy';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { Users } from 'src/entities/user.entity';
 
 @Module({
     imports: [
@@ -16,7 +18,8 @@ import { JwtStrategy } from './strategies/jwt.strategy';
         JwtModule.register({
             secret: process.env.JWT_SECRET,
             signOptions: { expiresIn: '60s' },
-        })
+        }),
+        TypeOrmModule.forFeature([Users])
     ],
     providers: [
         AuthService, 
