@@ -4,6 +4,7 @@ import { APIModule } from './api/api.module';
 import { ConfigsModule } from './core/configs/configs.module';
 import { ConfigsService } from './core/configs/configs.service';
 import { AccessLoggerMiddleware } from './core/middlewares/logger.service';
+import { Posts } from './entities/post.entity';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { AccessLoggerMiddleware } from './core/middlewares/logger.service';
         database: config.DB_NAME,
         username: config.DB_USER,
         password: config.DB_PASSWD,
+        entities: [Posts],
         synchronize: config.IS_DEV,
         keepConnectionAlive: config.IS_DEV,
       }),

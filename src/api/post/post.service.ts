@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Posts } from 'src/entities/post.entity';
 import { Repository } from 'typeorm';
@@ -11,9 +11,15 @@ export class PostService {
         private postsRepository: Repository<Posts>
     ) {}
 
-    async createPost(spaceId: string, createPostDto: CreatePostDto) {
+    async createPost(spaceId: string, createPostDto: CreatePostDto): Promise<Posts> {
+        console.log(createPostDto);
         const new_post = this.postsRepository.create(createPostDto);        
         // spaceId 연결하는 코드 추가 필요
         return await this.postsRepository.save(new_post);
+    }
+
+    async getPost(postId): Promise<Posts> {
+        const post = await this.postsRepository.findOneOrFail({ id: postId })
+        return post;
     }
 }
