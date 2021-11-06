@@ -20,7 +20,7 @@ services:
   database:
     image: mysql:8
     ports:
-      - '3306:3306'
+      - '3307:3306'
     volumes:
       - data:/var/lib/mysql
     container_name: hermes_database
