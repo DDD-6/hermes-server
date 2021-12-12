@@ -6,13 +6,16 @@ import {
   Post,
   Put,
   UploadedFiles,
+  UseGuards,
   UseInterceptors,
 } from '@nestjs/common';
 import { FileFieldsInterceptor } from '@nestjs/platform-express';
 import { ApiTags } from '@nestjs/swagger';
+import { BypassAuthGuard } from 'src/core/middlewares/bypass.guard';
 import { CreateSpaceDTO, CreateSpaceFiles } from './space.dto';
 import { SpaceService } from './space.service';
 
+@UseGuards(BypassAuthGuard)
 @ApiTags('space')
 @Controller('spaces')
 export class SpaceController {
