@@ -6,12 +6,12 @@ import {
 } from 'typeorm';
 
 @Entity()
-export class Member {
+export class User {
   @PrimaryGeneratedColumn()
-  id: number;
+  id: string;
 
   @Column()
-  authority: number;
+  name: string;
 
   @CreateDateColumn()
   createdAt: Date;

@@ -4,6 +4,7 @@ import { APIModule } from './api/api.module';
 import { ConfigsModule } from './core/configs/configs.module';
 import { ConfigsService } from './core/configs/configs.service';
 import { AccessLoggerMiddleware } from './core/middlewares/logger.service';
+import { schemas } from './core/schemas/mysql/schema.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { AccessLoggerMiddleware } from './core/middlewares/logger.service';
         username: config.DB_USER,
         password: config.DB_PASSWD,
         synchronize: config.IS_DEV,
+        entities: schemas,
         keepConnectionAlive: config.IS_DEV,
       }),
       inject: [ConfigsService],
